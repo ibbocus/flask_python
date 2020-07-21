@@ -11,13 +11,14 @@ app = Flask(__name__)
 
 
 # Syntax for decorators to create a web route
-@app.route('/')
+@app.route("/")
 def index():
     return "Welcome to MVC with flask project"
 
-@app.route('/user')
+@app.route("/<user>")
 def welcome_user(user):
     return f"Welcome {user}"
+
 
 
 # exercise:- create a function called welcome_user
@@ -29,5 +30,5 @@ def welcome_user(user):
 
 # start the server with the 'run()' method
 if __name__ == '__main__':
-    app.run(debug=False)
+    app.run(debug=True)
 
