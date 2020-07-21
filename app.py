@@ -1,6 +1,4 @@
-"# flask_python" 
-
-#from flask import Flask
+from flask import Flask
 
 # import flask
 
@@ -17,12 +15,16 @@ app = Flask(__name__)
 def index():
     return "Welcome to MVC with flask project"
 
-
 @app.route('/user')
 def welcome_user(user):
     return f"Welcome {user}"
 
 
+# exercise:- create a function called welcome_user
+# create a decorator to link the page /user
+# return "welcome to Python flask app dear {user}
+# in the browser when we load the page from home page to user name i.e your name
+# it should display your name in the browser with message from your methods
 
 
 # start the server with the 'run()' method
